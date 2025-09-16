@@ -1,0 +1,20 @@
+.box{
+    height: 150px;
+    width: 250px;
+    border:2px solid salmon;
+    background-color: greenyellow;
+    /* left right center justify */
+    text-align: justify; 
+}
+a{
+    text-transform: capitalize;
+    text-decoration: underline dashed;
+    /* text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: aqua;
+    text-decoration-thickness:3px ; */
+}
+p{
+    text-indent: 20px;
+    line-height: 25px;
+}
