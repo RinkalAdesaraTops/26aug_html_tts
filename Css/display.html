@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        .box{
+            height: 50px;
+            width: 80px;
+            border:2px solid black;
+            background-color: aqua;
+            display: inline-block;
+        }
+        .b1{
+            /* block inline inline-block */
+            /* display: none;  */
+            /* visible & hidden */
+            /* visibility: hidden;  */
+        }
+        .b2{
+            height: 300px;
+            width: 500px;
+            line-height: 30px;
+        }
+        #txt{
+            border:2px solid brown;
+            font-size: 25px;
+            color:blue;
+             font-family: "Montserrat", sans-serif;
+            /* font-family: 'Courier New', Courier, monospace; */
+            /* font-weight: 600; */
+            /* font-style: italic; */
+            /* font-variant:small-caps; */
+            /* display: none; */
+        }
+        #txt2 {
+            border: 2px dotted orangered;
+            font-family: mycustomfont;
+        }
+        @font-face {
+            font-family: "mycustomfont";
+            src: url('Montserrat-Italic-VariableFont_wght.ttf');
+        }
+    </style>
+</head> 
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box b1">3</div>
+    <div class="box">4</div>
+    <hr>
+    <div class="box b2"><p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos dolorem veniam eius quos, <span id="txt">quo aliquid,atque eaque optio </span>atque eaque <span id="txt2">optio unde vero corporis </span>saepe sequi est? Nihil saepe adipisci dolore temporibus?
+    </p></div>
+</body>
+</html>
