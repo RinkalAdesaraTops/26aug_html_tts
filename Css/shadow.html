@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: aquamarine;
+            box-shadow: 20px 20px 10px blue;
+            padding: 25px;
+            color: brown;
+            
+        }
+        p{
+            /* text-shadow: 8px 8px 2px green; */
+            letter-spacing: 2px;
+            word-spacing: 10px;
+        }
+        /* p::before{
+            content: "\2605";
+            // content:'\0026' ; 
+        } */
+        p::after{
+            content: "\2605";
+            /* content:'\0026' ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate placeat aspernatur et, libero ducimus dignissimos eligendi accusantium sit totam blanditiis saepe magni ipsam, labore esse alias sequi beatae velit.
+        </p>
+    </div>
+</body>
+</html>

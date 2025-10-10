@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            display: flex;
+             /* flex-wrap: wrap; */
+            /* flex-direction: column-reverse; */ 
+            /* flex-flow: row wrap-reverse; */
+            /* justify-content: space-evenly; */
+            /* align-items: stretch; */
+            /* gap:10px 20px; */
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid blue;
+           
+        }
+        .b1{
+            /* width: 150px; */
+            order:3;
+            flex-shrink:3;
+            
+            /* flex-grow:6; */
+        }
+        .b2{
+            align-self: flex-end;
+            /* order:1 */
+        }
+        .b3{
+            order:1
+        }
+        .b4{
+            order:5
+        }
+        .b5{
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box b2">box3</div>
+        <div class="box">box4</div>
+        <div class="box b1">box5</div>
+        <!-- <div class="box b1">box6</div>
+        <div class="box b2">box7</div>
+        <div class="box b3">box8</div>
+        <div class="box b4">box9</div>
+        <div class="box b5">box10</div>
+        <div class="box b5">box10</div>
+        <div class="box b5">box10</div> -->
+    </div>
+</body>
+</html>
