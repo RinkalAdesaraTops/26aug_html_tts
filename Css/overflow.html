@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bx {
+            height: 200vh;
+            width: 100px;
+            border: 2px solid black;
+            overflow: scroll;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: olive;
+            border: 2px solid black;
+            margin: 30px;
+            transition: all 2s linear 3s;
+            transition-delay: 3s;
+            /* transition-timing-function: ; */
+        }
+        .box:hover{
+            /* transform: scale(2,2); */
+            /* transform: scaleY(2); */
+            /* transform: translate(200px,100px); */
+            /* transform: rotate(60deg); */
+            transform: skew(60deg);
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdamvel ad laboriosam minima aliquam
+        ipsa numquam, beatae sed earum veniam animi! Eveniet, autem? Voluptates sapiente quas sed minima iste
+        consequatur?
+    </div>
+    <div class="box"></div>
+</body>
+
+</html>
