@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('<br><hr><b>finde mix value</b>')
+        let a = parseInt(prompt("enter vlue of A"))
+        let b = parseInt(prompt("enter vlue of B"))
+        let c = parseInt(prompt("enter vlue of C"))
+        let d = parseInt(prompt("enter vlue of D"))
+        document.write('<br> vlue of A is :',a)
+        document.write('<br> vlue of B is :',b)
+        document.write('<br> vlue of C is :',c)
+        document.write('<br> vlue of D is :',d)
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    document.write('<br> A is mix')
+                } else {
+                    document.write('<br> D is mix')
+                }
+            }
+        } else if (b > c) {
+            if (b > d) {
+                document.write('<br> B is mix')
+            } else {
+                document.write('<br> D is mix')
+            }
+        } else if(c>d) {
+            document.write('<br> C is mix')
+        }else{
+            document.write('<br> D is mix')
+        }
+    </script>
+</body>
+</html>

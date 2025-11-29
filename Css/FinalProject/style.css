@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+.b1{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.bd{
+    border-bottom: 1px solid grey;
+}

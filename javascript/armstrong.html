@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let no=123
+        let sum=0
+        let f=no
+        while(no>0){
+            let r= no%10
+            no = Math.floor(no/10)
+            sum = sum + (r**3)
+        }
+        document.write('<br>No is '+f)
+        document.write('<br>sum is '+sum)
+        if(f==sum){
+            document.write('<br>It is armstrong no')
+        } else {
+            document.write('<br>It is not armstrong no')
+        }
+    </script>
+</body>
+</html>

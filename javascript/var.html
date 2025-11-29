@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1)Nothing
+        a=10
+        b=20
+        c=a+b
+        document.write("Addition is ",c)
+        document.write("<br>Addition is "+(a+b))
+        document.write("<br>minus is "+(a-b))
+        document.write("<br>multiply is "+ a*b)
+        // 2)var keyword -- redeclare & reassign are allowed 
+        var str = "hi"
+        document.write('<br> Str is '+str)
+        var str = 10.25
+        document.write('<br> Str is '+str)
+        //3)const keyword = cant redeclare & reassign
+        const pi=3.14
+        document.write('<br>Pi is '+pi)
+        // pi="jdhkjdf"
+        // document.write('<br>Pi is '+pi)
+        //4)let keyword - cant redeclare but reassign is possible
+        let sh = "Hii"
+        document.write('<br>sh is '+sh)
+        sh = "Hii hello"
+        document.write('<br>sh is '+sh)
+    </script>
+</body>
+</html>
