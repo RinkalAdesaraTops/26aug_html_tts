@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,567,78,30,40]
+        document.write('<br>'+arr)
+        arr.push(55)
+        document.write('<br>'+arr)
+        arr.push(65)
+        document.write('<br>'+arr)
+        arr.pop()
+        document.write('<br>'+arr)
+        arr.unshift(100)
+        document.write('<br>'+arr)
+        arr.unshift(120)
+        document.write('<br>'+arr)
+        arr.shift()
+        document.write('<br>'+arr)
+        // arr = ["xyz","jgk","abc","kfg","yui"]
+        document.write('<br>ASC Sorting '+arr.sort())
+        document.write('<br>Desc Sorting '+arr.reverse())
+        // compare function
+        document.write('<br> Sorting is '+arr.sort(function(a,b){
+                return b-a //10-20 = -10  78-30=48
+        }))
+        document.write('<br>Desc Sorting '+arr.reverse()) 
+        arr.splice(3,0,22,44,67,78,89,90) //add or remove elements from positionwise
+        document.write('<br>'+arr)
+        arr.splice(4,3)
+        document.write('<br>original array'+arr)
+        //slice - Get data from positionwise 
+        let arr1 = arr.slice(3)
+        document.write('<br>'+arr1)
+        arr1 = arr.slice(3,9)
+        document.write('<br>'+arr1)
+        arr1 = arr.slice(-6)
+        document.write('<br>'+arr1)
+        arr1 = arr.slice(-8,-3)
+        document.write('<br>'+arr1)
+        // includes function always return boolean value 
+        document.write('<br>'+arr.includes(100))      
+    </script>
+</body>
+</html>

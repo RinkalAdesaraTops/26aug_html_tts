@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // key-value pair 
+        let obj = {
+            "id": 101,
+            "name": "test",
+            "age": 25,
+            "salary": 25400,
+            "qualification":["10th","12th","BCA","MCA"],
+            "dispFunc": function () {
+                return this.name + "--" + this.age
+            },
+            get dispSal() {
+                return this.salary
+            },
+            set newSal(a) {
+                this.salary = a
+            }
+        }
+        //obj.qualification[0]
+        // document.write('<br>Name is '+obj['name'])
+        // document.write('<br>Age is '+obj.age)
+        obj.lastname = "yeryutuy" //insert
+        document.write('<br>Salary is ' + obj.salary)
+        for (let x in obj) {
+            document.write('<br>' + x + ' is ' + obj[x])
+        }
+        document.write('<br><hr>')
+        document.write('<br><hr>')
+        delete obj.lastname //delete
+        for (let x in obj) {
+            document.write('<br>' + x + ' is ' + obj[x])
+        }
+        document.write('<br><hr>')
+        document.write('<br>Name & Age is ' + obj.dispFunc())
+        obj.newSal = 50000 //update
+        document.write('<br>Salary is ' + obj.dispSal)
+    </script>
+</body>
+
+</html>

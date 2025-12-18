@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // User defined Function
+        // 1)TNRN - take nothing return nothing
+        function add(){
+            let a=34
+            let b=20
+            document.write('<br>Addition is '+(a+b))
+        }
+        // 2)TSRN - take something return nothing
+        function area(l,b,h){
+            document.write('<br> Area is '+(l*b*h))
+        }
+        //3)TNRS - take nothing return something
+        function area_circle(){
+            const pi=3.14
+            let r=2.5
+            return pi*r*r
+        }
+        //4)TSRS - take something return something
+        function cube(r){
+            return r**3
+        }
+        add()
+        area(25,5,10)
+        document.write('<br>Area of circle is '+area_circle())
+        // let ans = cube(5)
+        // document.write('<br>Cube is '+ans)
+         document.write('<br>Cube is '+cube(5))
+    </script>
+</body>
+</html>

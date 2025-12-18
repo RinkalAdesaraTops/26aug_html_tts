@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,55,33,44,55,100,255]
+        // map function
+        let res = arr.map((i,index)=>{
+                return i*2
+            // document.write('<br>index is '+index)
+            // document.write('<br>element is '+i)
+        })
+        document.write('<br>'+arr)
+        document.write('<br>'+res)
+        // diff b/w includes find & filter - search element from array
+        //includes return true/false
+        //find returns single value
+        //filter returns multiple value(array)
+        res = arr.filter((i,index)=> i==55)
+        console.log(res);
+        res = arr.find((i,index)=> i==55)
+        console.log(res);
+        // reduce & reduceRight
+        let result = arr.reduceRight((a,b)=>{
+            console.log("a is "+a);
+            console.log("b is "+b);
+            return a+b //a=10 b=20 a=30 b=55
+        })
+        document.write('<br>Sum is '+result)
+        //  let arr = [10,20,55,33,44,55,100,255]
+        let maximum = arr.reduce((max,curr)=>{
+            if(curr>max){ //10>20 max=10 curr=20 55>10
+                max = curr //max=55
+            }
+            return max
+        })
+        document.write('<br>Maximum value is '+maximum)
+        // some(or operator) & every(And operator)
+        let a = [2,4,6,8,7,10]
+        let resul = a.every((i)=>{
+            return i%2==0
+        })
+        console.log(resul);
+    </script>
+</body>
+</html>

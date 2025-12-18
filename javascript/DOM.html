@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        Name:
+        <input type="text" name="username" id="username"><br>
+        Qualification:
+        <input type="checkbox" name="q1" value="10th">10th
+        <input type="checkbox" name="q1" value="12th">12th
+        <input type="checkbox" name="q1" value="BCA">BCA
+        <input type="checkbox" name="q1" value="MCA">MCA
+        <br><br>
+        <button type="button" onclick="addData()">Add</button>
+    </form>
+    <hr>
+    <div id="demo"></div>
+    <div id="txt"></div>
+    <p class="abc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptas cupiditate commodi soluta
+        nobis, tenetur blanditiis ratione.</p>
+    <p>gfhjhgfj ghj</p>
+    <p class="abc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptas cupiditate commodi soluta
+        nobis, tenetur blanditiis ratione.</p>
+    <p>gfhjhgfj ghj</p>
+    <p class="abc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptas cupiditate commodi soluta
+        nobis, tenetur blanditiis ratione.</p>
+    <p>gfhjhgfj ghj</p>
+    <script>
+        const addData = () => {
+            let a = document.getElementsByName('username')[0]
+            a.style.color = 'green'
+            document.getElementById('demo').innerHTML = "Your name is " + a.value
+        }
+        // document.getElementById('demo').innerHTML = "<b>Good Morning...!!!</b>"
+        // document.getElementById('txt').innerText = "<b>Good Morning...!!!</b>"
+        // document.getElementById('demo').style.color = "red"
+        // document.getElementById('demo').style.backgroundColor = "yellowgreen"
+        // // document.getElementsByTagName('p').style.color="blue"
+        // // console.log(document.getElementsByTagName('p'))
+        // let a = document.getElementsByClassName('abc') //[p,p]
+        // // document.getElementsByTagName('p')[0].style.color="blue"
+        // // document.getElementsByTagName('p')[1].style.color="maroon"
+        // // getElementsByName
+        // for(let i=0;i<a.length;i++){
+        //     if(i%2==0)
+        //         a[i].style.color = "maroon"
+        //     else
+        //         a[i].style.color = "blue"
+        // }
+    </script>
+
+</body>
+
+</html>
