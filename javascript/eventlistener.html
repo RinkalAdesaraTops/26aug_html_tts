@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <hr>
+    <div id="demo1"></div>
+    <!-- <ul>
+        <li>abc</li>
+        <li>xyz</li>
+        <li>pqr</li>
+    </ul> -->
+    <script>
+        let btn = document.createElement("button")
+        let txt = document.createTextNode("Add Data")
+        btn.appendChild(txt)
+        document.getElementById("demo").append(btn)
+        btn.addEventListener("click",()=>{
+            alert("button clicked..")
+        })
+        let a = document.createElement('ul')
+        let b = document.createElement('li')
+        let txt1 = document.createTextNode("ABC")
+        b.appendChild(txt1)
+        a.appendChild(b)
+        document.getElementById("demo1").append(a)
+        /*
+        ul
+            li - abc
+            li - xyz
+        */
+    </script>
+</body>
+</html>

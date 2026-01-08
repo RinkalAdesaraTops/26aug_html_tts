@@ -1,0 +1,20 @@
+What is javascript?
+push & pop
+unshift & shift 
+what is inheritance
+slice & splice diff
+what is the use of this keyword
+what is the use of super keyword
+explain getter & setter method of object
+for_in & for_of loop diff
+how many types of constructor
+list localstorage function
+
+callback & hell
+eventListener
+promises
+try-catch
+async-await
+api
+localstorage - crud
+

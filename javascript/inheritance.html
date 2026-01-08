@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class user {
+            constructor(){
+                document.write('<br>Parent constructor called..')
+            }
+            dispUser(){
+                document.write('<br> dispUser called..')
+            }
+            area(r){
+                const pi=3.14
+                document.write('<br>Area of circle is '+(pi*r**2))
+            }
+        }
+        class userchild extends user{
+            constructor(){
+                super()
+                document.write('<br>child constructor called..')
+            }
+            dispChild(){
+                document.write('<br> dispChild called..')
+            }
+            area(l,b){
+                super.area(l)
+                document.write('<br>Area of rectangle is '+(l*b))
+            }
+        }
+        class userchild1 extends userchild{
+            constructor(){
+                super()
+                document.write('<br>child1 constructor called..')
+            }
+            dispChild1(){
+                document.write('<br> dispChild1 called..')
+            }
+            area(a,b,c){
+                super.area(a,b)
+                document.write('<br>Area of triangle is '+(a*b*c))
+            }
+        }
+        let a1 = new userchild1()
+        a1.dispUser()
+        a1.dispChild()
+        a1.dispChild1()
+        a1.area(20,10,5)
+    </script>
+</body>
+</html>

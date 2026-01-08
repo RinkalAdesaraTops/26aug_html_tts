@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ...spread operator - to get all elements
+        let arr = [10,20,30,40,50]
+        let b = [55,66,77]
+        
+        let merge_arr = [...arr,...b]
+        document.write('<br>'+merge_arr)
+        // const [p,q,r,s,t] = arr
+        //remaining element -- rest of operator
+        const [p,q,...r] = arr
+        document.write('<br>'+p)
+        document.write('<br>'+q)
+        document.write('<br>'+r)
+        const obj = {
+            name:"fdgdfg",
+            age:23,
+            salary:67777
+        }
+        let {name,age,salary}=obj
+        console.log(name);
+        
+    </script>
+</body>
+</html>

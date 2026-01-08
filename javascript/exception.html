@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //error
+        // 1- system generated
+        // 2- User generated =exception
+        // exception handling = try_catch_finally block
+        let a=35
+        let b=20
+        try{
+            //error generate
+            if(b<=0) {
+                throw "Division is not posible with zero"
+            } else {
+                document.write('<br>Division is '+(a/b))
+            }
+        } catch(e){
+            document.write('<br>Error is '+e)
+            //solution
+        } finally{
+            //always executed
+            document.write('<br>Multiplication is '+(a*b))
+        }
+        async function abc(){
+            await xyz()
+        }
+        const abc = async()=>{
+            await xyz()
+        }
+        abc()
+        (function (){
+
+        })()
+    </script>
+</body>
+</html>

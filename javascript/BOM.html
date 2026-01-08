@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">Hiii</div>
+    <span id="hr">00</span> :<span id="min">00</span> : <span id="txt">00</span>
+    <script>
+         document.getElementById('demo').innerHTML = "Hello"
+        // setTimeout - functionality delay 
+        setTimeout(()=>{
+            document.getElementById('demo').innerHTML = "Hello"
+        },2000)
+        let count=0
+        let min=1
+        setInterval(()=>{
+            count+=1
+            document.getElementById('txt').innerHTML = count
+            if(count>=10){
+                document.getElementById('min').innerHTML = min++
+                count=0
+            }
+        },1000)
+    </script>
+</body>
+</html>

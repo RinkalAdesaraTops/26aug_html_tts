@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const isEven = (n)=>{
+            return n%2
+        }
+        // high order function
+        const Hof = (func,a)=>{
+            let res = func(a)
+            if(res == 0){
+                document.write('<br>It is even no')
+            } else {
+                document.write('<br>It is odd no')
+            }
+        }
+        Hof(isEven,9)
+        const add = async()=>{
+            await isEven()
+        }
+            </script>
+</body>
+</html>

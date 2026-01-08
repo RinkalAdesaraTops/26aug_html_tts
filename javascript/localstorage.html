@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Localstorage Example</h4>
+    <div id="txt"></div>
+    <button onclick="saveData()">Set</button>
+    <button onclick="dispData()">Display</button>
+    <button onclick="delAge()">Delete Age</button>
+    <button onclick="updAge()">Update Age</button>
+    <button onclick="delAll()">Delete All</button>
+    <script>
+        const saveData = () => {
+            localStorage.setItem("Username", "Test@123")
+            localStorage.setItem("Age", 25)
+            localStorage.setItem("Salary", 25000)
+        }
+        const dispData = () => {
+            let a = localStorage.getItem("Username")
+            let b = localStorage.getItem("Age")
+            let c= localStorage.getItem("Salary")
+            document.getElementById('txt').innerHTML = "Name is " + a
+            document.getElementById('txt').innerHTML += "<br>Age is " + b
+            document.getElementById('txt').innerHTML += "<br>Salary is " + c
+        }
+        const delAge = ()=>{
+            localStorage.removeItem('Age')
+        }
+        const delAll = ()=>{
+            localStorage.clear()
+        }
+        const updAge = ()=>{
+            localStorage.setItem("Age",30)
+        }
+
+    </script>
+</body>
+
+</html>
