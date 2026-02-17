@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Outlet } from "react-router";
 
 const StudentComponent = () => {
   const [data, setData] = useState({
@@ -50,6 +51,7 @@ const StudentComponent = () => {
     setAlldata(res);
   };
   return (
+    <>
     <div>
       <form action="#" method="post" onSubmit={saveData}>
         Name:{" "}
@@ -114,6 +116,8 @@ const StudentComponent = () => {
         </tbody>
       </table>
     </div>
+    <Outlet />
+    </>
   );
 };
 
