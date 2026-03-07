@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { delData, insData } from './RTK/EmpReducer'
+import { delData, insData, updData } from './RTK/EmpReducer'
 
 const RTKCrud = () => {
     const [data,setData] = useState({
         name:"",
         age:""
     })
+    const [id,setId] = useState('')
     const allData = useSelector((state)=>state.Emp.data)
     const dispatch = useDispatch()
     const handleChange = (e)=>{
@@ -18,7 +19,23 @@ const RTKCrud = () => {
     }
     const saveData = (e)=>{
         e.preventDefault()
-        dispatch(insData(data))
+        if(id!=''){
+            dispatch(updData({id,data}))
+        } else{
+            dispatch(insData(data))
+
+        }
+
+        setId('')
+        setData({
+            name:"",
+            age:""
+        })
+    }
+    const editData = (id)=>{
+        let res = allData.find((i,index)=>index == id)
+        setData(res)
+        setId(id)
     }
   return (
     <div>
@@ -48,7 +65,7 @@ const RTKCrud = () => {
                             <td>{i.name}</td>
                             <td>{i.age}</td>
                             <td>
-                                <button>Edit</button>
+                                <button onClick={()=>editData(index)}>Edit</button>
                                 <button onClick={()=>dispatch(delData(index))}>Delete</button>
                             </td>
                         </tr>

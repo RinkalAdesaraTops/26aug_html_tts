@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { delFunc, insFunc } from './action/UserAction'
+import { delFunc, insFunc, updFunc } from './action/UserAction'
 
 const ReduxCrud = () => {
     const [data,setData]=useState({
         name:"",
         age:""
     })
+    const [id,setId] = useState('')
     const allData = useSelector((i)=>i.data)
     const dispatch = useDispatch()
     const handleChange = (e)=>{
@@ -18,7 +19,21 @@ const ReduxCrud = () => {
     }
     const saveData = (e)=>{
         e.preventDefault()
-        dispatch(insFunc(data))
+        if(id!=''){
+            dispatch(updFunc(id,data))
+        } else {
+            dispatch(insFunc(data))
+        }
+        setData({
+            name:"",
+            age:""
+        })
+        setId('')
+    }
+    const editData = (id)=>{
+        let res = allData.find((i,index)=>index == id)
+        setData(res)
+        setId(id)
     }
   return (
     <div>
@@ -45,7 +60,10 @@ const ReduxCrud = () => {
                             <td>{index+1}</td>
                             <td>{i.name}</td>
                             <td>{i.age}</td>
-                            <td><button onClick={()=>dispatch(delFunc(index))}>Delete</button></td>
+                            <td>
+                                <button onClick={()=>editData(index)}>Edit</button>
+                                <button onClick={()=>dispatch(delFunc(index))}>Delete</button>
+                            </td>
                         </tr>
                     )
                 })  
