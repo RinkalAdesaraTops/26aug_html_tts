@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { addDoc, collection,query,onSnapshot } from "firebase/firestore";
+import { addDoc, collection,query,onSnapshot, deleteDoc, doc, getDoc, updateDoc } from "firebase/firestore";
 const FirebaseComponent = () => {
   const [data, setData] = useState({
     name: "",
@@ -17,13 +17,24 @@ const FirebaseComponent = () => {
   };
   const saveData = async (e) => {
     e.preventDefault();
-    await addDoc(collection(db, "userinfo"), data);
+    if(id!='')
+      await updateDoc(doc(db,"userinfo",id),data)
+    else 
+      await addDoc(collection(db, "userinfo"), data);
     setData({
       name: "",
       age: "",
     });
+    setId('')
   };
-  const disp = () => {};
+  const delData = async(id)=>{
+      await deleteDoc(doc(db,"userinfo",id))
+  }
+  const editData = async(id)=>{
+      let userdata = await getDoc(doc(db,"userinfo",id))
+      setData(userdata.data())
+      setId(id)
+  }
   useEffect(() => {
     const q = query(collection(db, "userinfo"));
     onSnapshot(q, (i) => {
@@ -78,7 +89,10 @@ const FirebaseComponent = () => {
                 <td>{i.id}</td>
                 <td>{i.name}</td>
                 <td>{i.age}</td>
-                <td>Delete</td>
+                <td>
+                  <button onClick={()=>editData(i.id)}>Edit</button>
+                  <button onClick={()=>delData(i.id)}>Delete</button>
+                </td>
               </tr>
             );
           })}
